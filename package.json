@@ -1,0 +1,57 @@
+{
+  "name": "dcube",
+  "version": "1.0.0",
+  "description": "this is dcube.",
+  "main": "index.js",
+  "scripts": {
+    "build": "node rollup/build.js && npm run prettier",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prettier": "prettier --write \"dist/dcube.amd.js\" \"dist/dcube.common.dev.js\" \"dist/dcube.esm.js\" \"dist/dcube.js\"",
+    "test": "flow check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nonmonkey/dcube.git"
+  },
+  "files": [
+    "src",
+    "dist/*.js",
+    "types/*.d.ts"
+  ],
+  "keywords": [
+    "cube"
+  ],
+  "author": "du",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nonmonkey/dcube/issues"
+  },
+  "homepage": "https://github.com/nonmonkey/dcube#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/plugin-transform-flow-strip-types": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "core-js": "^3.6.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "flow-bin": "^0.115.0",
+    "prettier": "^1.19.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-buble": "^0.19.8",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "sam-test-data": "^0.0.5"
+  }
+}
